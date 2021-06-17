@@ -6,5 +6,10 @@ pipeline{
                  println "Build"
             }
         }
+        stage('Test'){
+            steps{
+                println "Test"
+            }
+        }
     }
 }
