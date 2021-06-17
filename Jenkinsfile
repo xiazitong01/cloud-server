@@ -4,8 +4,8 @@ pipeline {
     stage('Build') {
       steps {
         git(url: 'https://github.com/xiazitong01/cloud-server.git', branch: 'master')
-        sh '''cd $WORKSPACE
-mvn clean package'''
+        sh 'cd $WORKSPACE'
+        sh 'mvn clean package'
       }
     }
 
