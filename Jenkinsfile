@@ -14,5 +14,12 @@ pipeline {
       }
     }
 
+    stage('deliver') {
+      steps {
+        sh './deliver.sh'
+        input 'deliver Done'
+      }
+    }
+
   }
 }
