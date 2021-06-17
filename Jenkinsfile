@@ -3,9 +3,10 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        git 'https://github.com/xiazitong01/cloud-server.git'
+        git(url: 'https://github.com/xiazitong01/cloud-server.git', branch: 'master')
         sh 'mvn clean package'
       }
     }
+
   }
 }
