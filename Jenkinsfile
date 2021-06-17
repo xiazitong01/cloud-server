@@ -1,29 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('compile') {
+    stage('Build') {
       steps {
-        sh 'mvn clean compile'
-      }
-    }
-
-    stage('package') {
-      steps {
+        git 'https://github.com/xiazitong01/cloud-server.git'
         sh 'mvn clean package'
       }
     }
-
-    stage('install') {
-      steps {
-        sh 'mvn clean install'
-      }
-    }
-
-    stage('test') {
-      steps {
-        sh 'mvn clean test'
-      }
-    }
-
   }
 }
